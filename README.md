@@ -1,4 +1,13 @@
 # Zumi
 Zumi
 
-imgconverter : 라즈베리파이에서 마스터 PC로 영상을 송수신하는 구독자 및 발행자 노드 패키지
+ROS를 사용하여 Zumi 제어하기
+
+Arduino
+아두이노에 들어가는 펌웨어
+
+Pi 
+RaspberryPi Zero에서 실행하는 패키지
+
+zumi_beta
+마스터 PC에서 실행하는 패키지
