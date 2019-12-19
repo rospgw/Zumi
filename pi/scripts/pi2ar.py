@@ -45,6 +45,5 @@ class I2CComm(object):
 
 if __name__ == '__main__':
 	st=0
-	
 	i2c = I2CComm()
 	listener()
