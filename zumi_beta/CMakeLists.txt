@@ -8,8 +8,13 @@ project(zumi_beta)
 ## if COMPONENTS list like find_package(catkin REQUIRED COMPONENTS xyz)
 ## is used, also find other catkin packages
 find_package(catkin REQUIRED COMPONENTS
+  cv2
+  cv_bridge
   roscpp
   rospy
+  sensor_msgs
+  std_msgs
+  tensorflow
 )
 
 ## System dependencies are found with CMake's conventions
@@ -69,7 +74,7 @@ find_package(catkin REQUIRED COMPONENTS
 ## Generate added messages and services with any dependencies listed here
 # generate_messages(
 #   DEPENDENCIES
-#   std_msgs  # Or other packages containing msgs
+#   sensor_msgs#   std_msgs
 # )
 
 ################################################
@@ -104,7 +109,7 @@ find_package(catkin REQUIRED COMPONENTS
 catkin_package(
 #  INCLUDE_DIRS include
 #  LIBRARIES zumi_beta
-#  CATKIN_DEPENDS roscpp rospy
+#  CATKIN_DEPENDS cv2 cv_bridge roscpp rospy sensor_msgs std_msgs tensorflow
 #  DEPENDS system_lib
 )
 
