@@ -1,7 +1,12 @@
 # Zumi
-Zumi
 
-ROS를 사용하여 Zumi 제어하기
+ROS를 사용하여 Zumi로 순찰차 만들기
+
+# 1. 초기설정
+
+RaspberryPi Zero에 ROS melodic 설치
+http://wiki.ros.org/ROSberryPi/Installing%20ROS%20Kinetic%20on%20the%20Raspberry%20Pi
+
 
 # Arduino
 
