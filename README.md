@@ -2,7 +2,7 @@
 
 ROS를 사용하여 Zumi로 순찰차 만들기
 
-## 기능
+## - 기능
 
 1. 노란선을 좌측에 둔 차선인식
 
@@ -12,7 +12,7 @@ ROS를 사용하여 Zumi로 순찰차 만들기
 
 4. STOP SIGN 인식 시 정지
 
-## Arduino
+## - Arduino
 
 아두이노에 Arduino/zzuduino 업로드
 
@@ -32,7 +32,7 @@ IR센서 값이 일정 값 이하면 정지
 
 으로 기능 수행
 
-## Pi 
+## - Pi 
 
 RaspberryPi Zero에 ROS melodic 설치
 
@@ -42,7 +42,7 @@ workspace에 pi 다운 후 make
 
 'imgsender.py', 'pi2ar.py' 실행
 
-### imgsender.py
+### * imgsender.py
 
 'sender' Node를 생성하여 picamera의 이미지를 'image_topic' Topic으로 Publish
 
@@ -50,7 +50,7 @@ cv_bridge를 이용하여 image 송신
 
 통신속도를 빠르게 하기위해 frame을 100,100으로 낮춤
 
-### pi2ar.py
+### * pi2ar.py
 
 마스터PC에서 받은 값을 I2C를 이용하여 Arduino로 전송
 
@@ -64,7 +64,7 @@ STOP SIGN을 인식하면(st==200) 'stop' 값(200) Arduino로 전송
 
 STOP SIGN 인식을 멈추면(st==0) count 초기화
 
-## zumi_beta
+## - zumi_beta
 
 마스터 PC의 workspace에 zumi_beta 다운 후 make
 
