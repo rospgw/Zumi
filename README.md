@@ -16,7 +16,7 @@ ROS를 사용하여 Zumi로 순찰차 만들기
 
 아두이노에 Arduino/zzuduino 업로드
 
-### zzuduino
+#### * zzuduino
 
 i2c 통신으로 raspberrypi에서 값을 받아
 
@@ -42,7 +42,7 @@ workspace에 pi 다운 후 make
 
 'imgsender.py', 'pi2ar.py' 실행
 
-### * imgsender.py
+#### * imgsender.py
 
 'sender' Node를 생성하여 picamera의 이미지를 'image_topic' Topic으로 Publish
 
@@ -50,7 +50,7 @@ cv_bridge를 이용하여 image 송신
 
 통신속도를 빠르게 하기위해 frame을 100,100으로 낮춤
 
-### * pi2ar.py
+#### * pi2ar.py
 
 마스터PC에서 받은 값을 I2C를 이용하여 Arduino로 전송
 
