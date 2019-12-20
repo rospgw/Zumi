@@ -90,3 +90,10 @@ picamera에서 받은 이미지를 tensorflow를 이용하여 STOP SIGN 인식�
 
 'img_receiver' node를 생성하여 'image_topic'을 Subscribe 후 영상처리하여 'stop' Publish
 
+canny edge, dilate로 영상 전처리 후 팔각형  detection
+
+글씨체가 써 있는 사각형 구간만 스캔하여 tesseract를 이용해 STOP SIGN 인식
+
+STOP SIGN 인식하면 200 Publish
+
+없으면 0 Publish
