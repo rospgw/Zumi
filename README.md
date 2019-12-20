@@ -42,6 +42,8 @@ workspace에 pi 다운 후 make
 
 'imgsender.py', 'pi2ar.py' 실행
 
+%PI의 통신속도를 위해 최소한의 이미지를 보내고 받은 값을 전송만 해주도록 함
+
 #### * imgsender.py
 
 'sender' Node를 생성하여 picamera의 이미지를 'image_topic' Topic으로 Publish
@@ -69,3 +71,22 @@ STOP SIGN 인식을 멈추면(st==0) count 초기화
 마스터 PC의 workspace에 zumi_beta 다운 후 make
 
 detector.py, stopdetector.py 실행
+
+#### * detector.py
+
+picamera에서 받은 이미지를 OpenCV를 이용하여 노란색, 보라색을 인식하여 PI로 Publish
+
+'receiver' node를 생성하여 'image_topic'을 Subscribe 후 영상처리하여 'yellow_x' Publish
+
+보라색을 인식하면 255 Publish
+
+노란색을 인식하면 (40 - 노란색 중점의 x 좌표)*0.03 Publish
+
+PI와 Arduino간 I2C통신으로는 0~255 값밖에 보내지 못함으로 -값일 때 -x+10으로 구분해서 Publish
+
+#### * stopdetector.py
+
+picamera에서 받은 이미지를 tensorflow를 이용하여 STOP SIGN 인식하여 PI로 Publish
+
+'img_receiver' node를 생성하여 'image_topic'을 Subscribe 후 영상처리하여 'stop' Publish
+
